@@ -122,6 +122,18 @@
     transform: .4s
 }
 
+.menu-toggle i.fa-bars {
+    cursor: pointer;
+    padding: 10px; /* Aumenta a área sensível ao toque */
+    margin-left: -10px; /* Compensa o padding para não deslocar o ícone */
+    display: inline-block;
+}
+
+.nave-zap-orc {
+    position: relative;
+    z-index: 10; /* Garante que os botões fiquem "acima" da barra de fundo */
+}
+
 @media(max-width:1025px) {
     .corpo-nav a {
         font-size: 1rem
@@ -2012,4 +2024,5 @@ img {
     }
 
     @media (max-width: 900px) { .card { min-width: calc(50% - 10px); } }
+
     @media (max-width: 600px) { .card { min-width: 100%; } }
