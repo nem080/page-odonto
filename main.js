@@ -34,6 +34,7 @@
         });
     }
 
+    // --- 2. MENU MOBILE ---
     function initMenuMobile() {
     // Agora selecionamos especificamente o ícone dentro do toggle
     const btnHamburguer = document.querySelector(".menu-toggle i.fa-bars");
