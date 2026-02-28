@@ -36,29 +36,38 @@
 
     // --- 2. MENU MOBILE ---
     function initMenuMobile() {
-    // Agora selecionamos especificamente o ícone dentro do toggle
-    const btnHamburguer = document.querySelector(".menu-toggle i.fa-bars");
-    const menuMobile = document.querySelector(".menu-mobile");
     const menuToggle = document.querySelector(".menu-toggle");
+    const menuIcon = document.querySelector(".menu-toggle i.fa-bars"); // O ícone hambúrguer
+    const menuMobile = document.querySelector(".menu-mobile");
+    const naveZap = document.querySelector(".nave-zap-orc"); // O container do WhatsApp
 
-    if (!btnHamburguer || !menuMobile) return;
+    if (!menuIcon || !menuMobile) return;
 
-    // O evento de "click" agora é apenas no ÍCONE
-    btnHamburguer.addEventListener("click", (e) => {
-        e.stopPropagation(); // Evita que o clique "vaze" para outros elementos
+    // ABERTURA: Agora o clique é APENAS no ícone, não na div pai
+    menuIcon.addEventListener("click", (e) => {
+        e.stopPropagation(); // Impede que o clique "suba" para a barra
         menuMobile.classList.toggle("active");
     });
 
-    // Fecha ao clicar fora (mantemos essa lógica, ela é boa!)
+    // PROTEÇÃO: Impede que cliques no WhatsApp/Orçamento abram o menu
+    if (naveZap) {
+        naveZap.addEventListener("click", (e) => {
+            e.stopPropagation(); // O clique para aqui e não ativa o menu
+        });
+    }
+
+    // FECHAMENTO: Clicar fora do menu ou do ícone fecha o menu
     document.addEventListener("click", (e) => {
-        // Se o clique NÃO for no menu E NÃO for no ícone hambúrguer, fecha o menu
-        if (!menuMobile.contains(e.target) && !btnHamburguer.contains(e.target)) {
+        const isClickInsideMenu = menuMobile.contains(e.target);
+        const isClickOnIcon = menuIcon.contains(e.target);
+
+        if (!isClickInsideMenu && !isClickOnIcon) {
             menuMobile.classList.remove("active");
         }
     });
 
-    // Fecha ao clicar em um link interno do menu
-    document.querySelectorAll(".menu-mobile ul li a").forEach(link => {
+    // FECHAMENTO: Ao clicar em um link interno
+    document.querySelectorAll(".menu-mobile a").forEach(link => {
         link.addEventListener("click", () => {
             menuMobile.classList.remove("active");
         });
@@ -224,3 +233,4 @@ document.addEventListener('keydown', (e) => {
         if (e.key === "ArrowRight") window.changeModalImg(1);
     }
 });
+
