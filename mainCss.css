@@ -618,7 +618,7 @@
         text-align: left;
         margin: 5px 20px 10px;
         padding: 0 10px;
-        line-height: 16px;
+        line-height: 20px;
     }
 }
 
@@ -2027,4 +2027,5 @@ img {
     @media (max-width: 900px) { .card { min-width: calc(50% - 10px); } }
 
     @media (max-width: 600px) { .card { min-width: 100%; } }
+
 
