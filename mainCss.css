@@ -404,7 +404,13 @@
 
     .descricao-main .paragrafo {
         text-align: justify;
-        margin: 0 20px 10px
+        margin: 0 5px 12px;
+        padding: 0;
+        font-size: 13px;
+        line-height: 1.6;
+        color: #333;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .imagem-inicio img {
@@ -2027,5 +2033,6 @@ img {
     @media (max-width: 900px) { .card { min-width: calc(50% - 10px); } }
 
     @media (max-width: 600px) { .card { min-width: 100%; } }
+
 
 
