@@ -367,7 +367,9 @@
 
 @media (max-width:415px) {
     .descri-inicio .titulo-p {
-        width: 240px
+        width: 240px;
+        font-size: 24.4px;
+        font-weight: 700;
     }
 
     .bg-header {
@@ -377,11 +379,6 @@
     .descri-inicio {
         margin: 0;
         padding: 0 2.5rem
-    }
-
-    .descri-inicio .titulo-p {
-        font-size: 24.4px;
-        font-weight: 700
     }
 
     .btns-inicio {
@@ -418,10 +415,151 @@
         border-radius: .625rem;
         width: 370px
     }
+
+     .bg-from form {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 10px 10px 5px;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        max-width: 100%
+    }
+
+    .bg-from .botao-geral {
+        background-color: #f4efef;
+        border: none;
+        box-shadow: 0 .0625rem .3125rem 0 #002ca4;
+        color: #002ca4;
+        padding: 10px 30px;
+        z-index: 200;
+        font-weight: 700;
+        text-transform: capitalize;
+        max-width: 200px;
+        border: none;
+        margin: 0 auto;
+        display: block;
+        grid-column: 2 / 8
+    }
+
+    .corpo-contato ul {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        justify-content: center;
+        margin: 0 auto
+    }
+
+    .corpo-contato .titulo-pequeno {
+        text-align: center
+    }
+
+    .paragrafo {
+        font-size: 17px
+    }
+
+     .log-img {
+        margin: 0 auto
+    }
+
+    .footer-corpo {
+        gap: 20px
+    }
+
+    .footer-info,
+    .paragrafo {
+        margin: 0 auto;
+        text-align: center
+    }
+
+    .bg-footer .autorais {
+        background-color: #f2f2f2;
+        font-size: .8rem
+    }
+
+    .footer-info .cortext:hover {
+        color: aqua;
+        transition: 1s
+    }
+
+    .autorais:hover a {
+        color: aqua;
+        transition: 1s
+    }
 }
 
-@media (max-width: 415px) {
-  .descricao-main {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body {
+    background-color: #FBFBFB
+}
+
+ul,
+li,
+a {
+    text-decoration: none;
+    list-style: none
+}
+
+h1 {
+    font-size: 2.5rem
+}
+
+h2 {
+    font-size: 2rem
+}
+
+h3 {
+    font-size: 1.8rem
+}
+
+.paragrafo {
+    font-size: 1.2rem
+}
+
+.local {
+    color: red
+}
+
+.container {
+    margin: 0 50px;
+    padding: 10px
+}
+
+.titulo-p {
+    font-size: 2.5rem;
+    font-family: 'IBM Plex Serif', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    text-transform: capitalize
+}
+
+.titulo-s {
+    font-size: 2rem;
+    font-family: 'IBM Plex Serif', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    text-transform: capitalize
+}
+
+.titulo-oculto {
+    font-size: 1.8rem;
+    display: none;
+    font-family: 'IBM Plex Serif', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    margin-bottom: 2.5rem
+}
+
+img {
+    display: block
+}
+
+ .descricao-main {
     width: 100%;
     margin: 0 auto;
     padding: 0 10px;
@@ -479,6 +617,11 @@
     padding: 8px 12px;
     display: block;
   }
+
+}
+
+@media (max-width: 415px) {
+ 
 }
 
 @media (max-width:376px) {
@@ -1491,49 +1634,9 @@ textarea {
     }
 }
 
-@media (max-width:415px) {
-    .bg-from form {
-        display: grid;
-        grid-template-columns: 1fr;
-        margin: 10px 10px 5px;
-        justify-content: center;
-        align-items: center;
-        align-self: center;
-        max-width: 100%
-    }
-
-    .bg-from .botao-geral {
-        background-color: #f4efef;
-        border: none;
-        box-shadow: 0 .0625rem .3125rem 0 #002ca4;
-        color: #002ca4;
-        padding: 10px 30px;
-        z-index: 200;
-        font-weight: 700;
-        text-transform: capitalize;
-        max-width: 200px;
-        border: none;
-        margin: 0 auto;
-        display: block;
-        grid-column: 2 / 8
-    }
-
-    .corpo-contato ul {
-        display: flex;
-        align-items: center;
-        flex-wrap: nowrap;
-        justify-content: center;
-        margin: 0 auto
-    }
-
-    .corpo-contato .titulo-pequeno {
-        text-align: center
-    }
-
-    .paragrafo {
-        font-size: 17px
-    }
-}
+/* @media (max-width:415px) {
+   
+} */
 
 @media (max-width:376px) {
     .resposta-from {
@@ -1725,107 +1828,8 @@ textarea {
     }
 }
 
-@media (max-width:415px) {
-    .log-img {
-        margin: 0 auto
-    }
-
-    .footer-corpo {
-        gap: 20px
-    }
-
-    .footer-info,
-    .paragrafo {
-        margin: 0 auto;
-        text-align: center
-    }
-
-    .bg-footer .autorais {
-        background-color: #f2f2f2;
-        font-size: .8rem
-    }
-
-    .footer-info .cortext:hover {
-        color: aqua;
-        transition: 1s
-    }
-
-    .autorais:hover a {
-        color: aqua;
-        transition: 1s
-    }
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box
-}
-
-body {
-    background-color: #FBFBFB
-}
-
-ul,
-li,
-a {
-    text-decoration: none;
-    list-style: none
-}
-
-h1 {
-    font-size: 2.5rem
-}
-
-h2 {
-    font-size: 2rem
-}
-
-h3 {
-    font-size: 1.8rem
-}
-
-.paragrafo {
-    font-size: 1.2rem
-}
-
-.local {
-    color: red
-}
-
-.container {
-    margin: 0 50px;
-    padding: 10px
-}
-
-.titulo-p {
-    font-size: 2.5rem;
-    font-family: 'IBM Plex Serif', Arial, Helvetica, sans-serif;
-    font-weight: 700;
-    margin-bottom: 2.5rem;
-    text-align: center;
-    text-transform: capitalize
-}
-
-.titulo-s {
-    font-size: 2rem;
-    font-family: 'IBM Plex Serif', Arial, Helvetica, sans-serif;
-    font-weight: 700;
-    margin-bottom: 2.5rem;
-    text-transform: capitalize
-}
-
-.titulo-oculto {
-    font-size: 1.8rem;
-    display: none;
-    font-family: 'IBM Plex Serif', Arial, Helvetica, sans-serif;
-    font-weight: 700;
-    margin-bottom: 2.5rem
-}
-
-img {
-    display: block
-}
+/* @media (max-width:415px) {
+}     */
 
 @media(max-width: 1024px) {
     .titulo-p {
@@ -2094,6 +2098,7 @@ img {
     @media (max-width: 900px) { .card { min-width: calc(50% - 10px); } }
 
     @media (max-width: 600px) { .card { min-width: 100%; } }
+
 
 
 
